@@ -16,12 +16,12 @@ export default function Alfabeto(props) {
         <div className="alfabeto">
             <div className="linha">
                 {primeiraLinha.map((letra) => (
-                    <button onClick={() => handleClick(letra)} disabled={props.desabilitarLetra === true ? true : props.letrasDesabilitadas.includes(letra) ? true : false} className="letra" key={letra}>{letra}</button>
+                    <button data-test="letter" onClick={() => handleClick(letra)} disabled={props.desabilitarLetra === true ? true : props.letrasDesabilitadas.includes(letra) ? true : false} className="letra" key={letra}>{letra}</button>
                 ))}
             </div>
             <div className="linha">
                 {segundaLinha.map((letra) => (
-                    <button onClick={() => handleClick(letra)} disabled={props.desabilitarLetra === true ? true : props.letrasDesabilitadas.includes(letra) ? true : false} className="letra" key={letra}>{letra}</button>
+                    <button data-test="letter" onClick={() => handleClick(letra)} disabled={props.desabilitarLetra === true ? true : props.letrasDesabilitadas.includes(letra) ? true : false} className="letra" key={letra}>{letra}</button>
                 ))}
             </div>
         </div>
